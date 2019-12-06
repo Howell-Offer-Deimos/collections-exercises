@@ -25,7 +25,7 @@ public class GroceryList {
 
 
         boolean opt = true;
-        System.out.println("Welcome to the Grocery List App! Would you like to create a grocery list?");
+        System.out.println("Welcome to Offer-Howell Foods! Would you like to create a grocery list?");
         opt = input.yesNo();
 
         if (opt) {
@@ -50,60 +50,65 @@ public class GroceryList {
 
                 switch (userInput) {
                     case 0:
-                        System.out.println("Thank you for using the Grocery List App!");
+                        System.out.println("Adios, muchacho! Thanks for shopping with Offer-Howell Foods");
                         break;
                     case 1:
+                        System.out.printf("Great, %d %s's were added to the Dairy category!%n", quantity, item);
                         setHashMap(dairy, item, quantity);
                         break;
                     case 2:
+                        System.out.printf("Great, %d %s's were added to the Produce category!%n", quantity, item);
                         setHashMap(produce, item, quantity);
                         break;
                     case 3:
+                        System.out.printf("Great, %d %s's were added to the Meats category!%n", quantity, item);
                         setHashMap(meats, item, quantity);
                         break;
                     case 4:
+                        System.out.printf("Great, %d %s's were added to the Snacks category!%n", quantity, item);
                         setHashMap(snacks, item, quantity);
                         break;
                     case 5:
+                        System.out.printf("Great, %d %s's were added to the Beverages category!%n", quantity, item);
                         setHashMap(beverages, item, quantity);
                         break;
                     case 6:
+                        System.out.printf("Great, %d %s's were added to the Breads category!%n", quantity, item);
                         setHashMap(breads, item, quantity);
                         break;
-                    default:
-                        System.err.println("That's not an option...");
                 }
 
 //                System.out.println(dairy.entrySet());
 //                System.out.println(beverages.isEmpty());
-                System.out.println("Would you like to add another item or is your list complete?");
+                System.out.println("Would you like to add another item?");
                 again = input.yesNo();
             } while (again);
 
-            if (!dairy.isEmpty())
-            {
-                System.out.println(dairy.entrySet());
-            }
-            if (!produce.isEmpty())
-            {
-                System.out.println(produce.entrySet());
-            }
-            if (!meats.isEmpty())
-            {
-                System.out.println(meats.entrySet());
-            }
-            if (!snacks.isEmpty())
-            {
-                System.out.println(snacks.entrySet());
-            }
             if (!beverages.isEmpty())
             {
-                System.out.println(beverages.entrySet());
+                System.out.println("Beverages "+beverages.entrySet());
             }
             if (!breads.isEmpty())
             {
-                System.out.println(breads.entrySet());
+                System.out.println("Breads "+breads.entrySet());
             }
+            if (!dairy.isEmpty())
+            {
+                System.out.println("Dairy "+dairy.entrySet());
+            }
+            if (!meats.isEmpty())
+            {
+                System.out.println("Meats "+meats.entrySet());
+            }
+            if (!produce.isEmpty())
+            {
+                System.out.println("Produce "+produce.entrySet());
+            }
+            if (!snacks.isEmpty())
+            {
+                System.out.println("Snakcs "+snacks.entrySet());
+            }
+
 
             System.out.println("That completes your list! Thank you for shopping with Offer-Howell Foods\n");
 
@@ -113,25 +118,4 @@ public class GroceryList {
         }
     }
 }
-//    Create a grocery list command line application. You will use your input class from previous exercises.
-//
-//    A user should be prompted if they would like to create a grocery list.
-//
-//    If they pick yes, they will be prompted if they would like to enter a new item.
-//
-//    If the users picks yes, they should be given the following three prompts:
-//
-//    Given an ordered list of grocery categories to choose from, select the category.
-//    Enter name of the item.
-//    Enter how many of the item.
-//    The user will then be given the choice to finalize the list or add an additional item.
-//
-//    Once the user finalizes the list, they will be presented with a complete list organized alphabetically and grouped
-//    by category, and including quantity.
 
-
-//        }
-
-
-
-//}
